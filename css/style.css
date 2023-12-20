@@ -441,6 +441,16 @@ footer img{
     margin: 0 auto;
     border-bottom: #DEA231 1px solid;
     text-align: center;
+    position: relative;
+}
+.footerMain::after{
+    content: "";
+    position: absolute;
+    width: 207px;
+    height: 245px;
+    background-image: url(../img/snowman.svg);
+    bottom: 0;
+    right: 0;
 }
 .Store2{
     /* width: 70px; */
