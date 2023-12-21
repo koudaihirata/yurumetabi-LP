@@ -39,6 +39,15 @@ h1 img{
     border-top: 3px #E5B65A solid;
     border-right: 3px #E5B65A solid;
     transform: rotate(135deg);
+    animation: triangle 3s infinite;
+}
+@keyframes triangle{
+    0%,100%{
+        transform: translateY(0) rotate(135deg);
+    }
+    50%{
+        transform: translateY(-20px) rotate(135deg);
+    }
 }
 
 .smartphone{
@@ -52,15 +61,23 @@ h1 img{
 
 
 
-
+.smartphone1{
+    position: absolute;
+    top: 15%;
+    left: 0;
+}
 /* スマホの真ん中部分 */
 .smartphone2{
     position: absolute;
     top: 25%;
     left: 35%;
 }
-
-
+.smartphone3{
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    z-index: -1;
+}
 
 
 .smartphone2::before{
@@ -74,6 +91,7 @@ h1 img{
 }
 
 
+
 /* 丸の編集（右から１） */
 .circle1{
     position: absolute;
@@ -84,6 +102,21 @@ h1 img{
     mix-blend-mode: multiply;
     top: 15%;
     left: -3%;
+    animation: circle1 2s forwards;
+}
+@keyframes circle1{
+    0%{
+        top: -25%;
+        left: 0;
+    }
+    50%{
+        top: 0;
+        left: -15%;
+    }
+    100%{
+        top: 15%;
+        left: -3%;
+    }
 }
 .circle2{
     position: absolute;
@@ -93,6 +126,22 @@ h1 img{
     background-color: #FAF1E0;
     mix-blend-mode: multiply;
     top: 50%;
+    left: 0;
+    animation: circle2 2s forwards;
+}
+@keyframes circle2{
+    0%{
+        top: 80%;
+        left: 0;
+    }
+    50%{
+        top: 70%;
+        left: -25%;
+    }
+    100%{
+        top: 50%;
+        left: 0;
+    }
 }
 .circle3{
     position: absolute;
@@ -103,6 +152,21 @@ h1 img{
     mix-blend-mode: multiply;
     top: 24%;
     left: 8%;
+    animation: circle3 2s forwards;
+}
+@keyframes circle3{
+    0%{
+        width: 750px;
+        height: 750px;
+        top: 0;
+        left: 0;
+    }
+    100%{
+        width: 269px;
+        height: 269px;
+        top: 24%;
+        left: 8%;
+    }
 }
 .circle4{
     position: absolute;
@@ -113,6 +177,21 @@ h1 img{
     mix-blend-mode: multiply;
     top: 45%;
     left: 24%;
+    animation: circle4 2s forwards;
+}
+@keyframes circle4{
+    0%{
+        top: 80%;
+        left: 18%;
+    }
+    50%{
+        top: 65%;
+        left: 30%;
+    }
+    100%{
+        top: 45%;
+        left: 24%;
+    }
 }
 .circle5{
     position: absolute;
@@ -123,6 +202,22 @@ h1 img{
     mix-blend-mode: multiply;
     top: 15%;
     left: 25%;
+    animation: circle5 2s forwards;
+}
+@keyframes circle5{
+    0%{
+        top: -25%;
+        left: 30%;
+
+    }
+    50%{
+        top: 12%;
+        left: 35%;
+    }
+    100%{
+        top: 15%;
+        left: 25%;
+    }
 }
 .circle6{
     position: absolute;
@@ -133,6 +228,17 @@ h1 img{
     mix-blend-mode: multiply;
     top: 63%;
     left: 40%;
+    animation: circle6 2s forwards;
+}
+@keyframes circle6{
+    0%,100%{
+        top: 63%;
+        left: 40%;
+    }
+    50%{
+        top: 60%;
+        left: 43%;
+    }
 }
 .circle7{
     position: absolute;
@@ -143,6 +249,18 @@ h1 img{
     mix-blend-mode: multiply;
     top: 60%;
     left: 43%;
+    animation: circle7 2s forwards;
+}
+@keyframes circle7{
+    0%,100%{
+        top: 60%;
+        left: 43%;
+
+    }
+    50%{
+        top: 63%;
+        left: 40%;
+    }
 }
 
 
