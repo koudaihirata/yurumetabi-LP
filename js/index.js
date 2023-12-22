@@ -56,3 +56,36 @@ const rotate = setInterval(() => {
     }
     i++;
 }, 3000);
+
+
+let square = document.querySelector('.square');
+let square2 = document.querySelector('.square2');
+
+// Intersection Observerを作成
+let observer = new IntersectionObserver((entries) =>{
+    entries.forEach(entry => {
+    // 要素がビューポートに入ったとき
+        if(entry.isIntersecting) {
+            // クラス名を追加
+            entry.target.classList.add('squareAni');
+        }
+    });
+});
+// 要素の監視を開始
+observer.observe(square);
+observer.observe(square2);
+
+
+let whiteSquare = document.querySelector('.whiteSquare');
+// Intersection Observerを作成
+let WhiteObserver = new IntersectionObserver((entries) =>{
+    entries.forEach(entry => {
+    // 要素がビューポートに入ったとき
+        if(entry.isIntersecting) {
+            // クラス名を追加
+            entry.target.classList.add('whiteSquareAni');
+        }
+    });
+});
+// 要素の監視を開始
+WhiteObserver.observe(whiteSquare);

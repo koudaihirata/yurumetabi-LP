@@ -256,7 +256,18 @@ h1 img{
 .road1{
     display: flex;
     justify-content: end;
+    position: relative;
 }
+.road1::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border: tomato 1px solid;
+    top: 0;
+    left: 50%;
+}
+
 h2{
     font-size: 32px;
     text-align: center;
@@ -367,6 +378,18 @@ h2 span{
     background-color: #FAF1E0;
     position: relative;
     border-radius: 15px 0 0 15px;
+    transform: translateX(90%);
+}
+.squareAni{
+    animation: squareAni 3s forwards;
+}
+@keyframes squareAni{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 .square::before{
     content: "";
@@ -418,7 +441,20 @@ h2 span{
     background-color: #fff;
     position: relative;
     border-radius: 0 15px 15px 0;
+    transform: translateX(-90%);
 }
+.whiteSquareAni{
+    animation: whiteSquareAni 3s forwards;
+}
+@keyframes whiteSquareAni{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
 .whiteSquare::after{
     content: "";
     position: absolute;
@@ -477,6 +513,7 @@ h2 span{
     background-color: #FAF1E0;
     position: relative;
     border-radius: 15px 0 0 15px;
+    transform: translateX(90%);
 }
 .square2::before{
     content: "";
