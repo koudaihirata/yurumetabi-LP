@@ -100,3 +100,50 @@ let WhiteObserver = new IntersectionObserver((entries) =>{
 });
 // 要素の監視を開始
 WhiteObserver.observe(whiteSquare);
+
+
+let road1Fade = document.querySelector('.road1Fade');
+let road2Fade = document.querySelector('.road2Fade');
+let road5Fade = document.querySelector('.road5Fade');
+
+let road1FadeObserver = new IntersectionObserver((entries) =>{
+    entries.forEach(entry =>{
+        if (entry.isIntersecting) {
+            entry.target.classList.add('Road1Fade')
+        }
+    });
+});
+
+road1FadeObserver.observe(road1Fade);
+road1FadeObserver.observe(road2Fade);
+road1FadeObserver.observe(road5Fade);
+
+
+let road3Fade = document.querySelector('.road3Fade');
+
+let road3FadeObserver = new IntersectionObserver((entries) =>{
+    entries.forEach(entry =>{
+        if (entry.isIntersecting) {
+            entry.target.classList.add('Road3Fade')
+        }
+    });
+});
+
+road3FadeObserver.observe(road3Fade);
+
+
+
+let road4Fade = document.querySelector('.road4Fade');
+let road6Fade = document.querySelector('.road6Fade');
+
+
+let road6FadeObserver = new IntersectionObserver((entries) =>{
+    entries.forEach(entry =>{
+        if(entry.isIntersecting) {
+            entry.target.classList.add('Road6Fade')
+        }
+    })
+})
+
+road6FadeObserver.observe(road6Fade);
+road6FadeObserver.observe(road4Fade);

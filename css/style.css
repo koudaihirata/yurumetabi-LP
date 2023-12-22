@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 .firstView{
     width: 85%;
     height: 100vh;
@@ -258,16 +261,23 @@ h1 img{
     justify-content: end;
     position: relative;
 }
-.road1::before{
-    content: "";
+.road1Fade{
     position: absolute;
     width: 50%;
     height: 100%;
-    border: tomato 1px solid;
-    top: 0;
-    left: 50%;
+    background-color: #fff;
 }
-
+.Road1Fade{
+    animation: road1Fade 6s forwards;
+}
+@keyframes road1Fade{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
 h2{
     font-size: 32px;
     text-align: center;
@@ -286,6 +296,13 @@ h2 span{
 .road2{
     position: relative;
 }
+.road2Fade{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+}
 .road2::before{
     content: "";
     position: absolute;
@@ -294,6 +311,7 @@ h2 span{
     top: -100%;
     left: 10%;
     background-image: url(../img/trip.svg);
+    z-index: 100;
     animation: trip 4s infinite;
 }
 @keyframes trip{
@@ -324,6 +342,26 @@ h2 span{
     display: flex;
     justify-content: space-between;
     align-items: start;
+    position: relative;
+}
+.road3Fade{
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+}
+.Road3Fade{
+    animation: road3Fade 6s forwards;
+}
+@keyframes road3Fade{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
 }
 .FEATUREStitle h3{
     font-size: 32px;
@@ -400,12 +438,21 @@ h2 span{
     left: 140px;
     background-image: url(../img/search.svg);
     animation: circle5 6s infinite;
+    z-index: 100;
 }
 .road4{
     margin: 0 auto;
     width: 270px;
     height: 250px;
     position: relative;
+}
+.road4Fade{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    z-index: 0;
 }
 .road4::before{
     content: "";
@@ -415,6 +462,7 @@ h2 span{
     background-image: url(../img/blue.svg);
     left: -80%;
     bottom: 0;
+    z-index: 100;
 }
 
 
@@ -486,6 +534,15 @@ h2 span{
 .road5{
     display: flex;
     justify-content: space-around;
+    position: relative;
+}
+.road5Fade{
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
 }
 .road5nothing{
     width: 65px;
@@ -532,6 +589,25 @@ h2 span{
     width: 270px;
     height: 250px;
     position: relative;
+}
+.road6Fade{
+    position: absolute;
+    width: 270px;
+    height: 250px;
+    background-color: #fff;
+    bottom: 0;
+}
+.Road6Fade{
+    transform-origin: right;
+    animation: road6Fade 5s forwards;
+}
+@keyframes road6Fade{
+    0%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0);
+    }
 }
 .road6::before{
     content: "";
