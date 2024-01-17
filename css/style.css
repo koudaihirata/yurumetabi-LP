@@ -408,7 +408,7 @@ h2 span{
 .SearchFunction > div > p{
     font-size: 18px;
     line-height: 40px;
-    margin-top: 90px;
+    margin-top: 40px;
 }
 .square{
     width: 600px;
@@ -527,7 +527,7 @@ h2 span{
 .shareBox > div > p{
     font-size: 18px;
     line-height: 50px;
-    margin-top: 120px;
+    margin-top: 40px;
 }
 
 
@@ -662,6 +662,10 @@ footer img{
     width: 240px;
     height: 65px;
 }
+footer h4{
+    opacity: 0;
+    background-color: #FAF1E0;
+}
 .footerMain{
     width: 60%;
     height: 300px;
@@ -678,7 +682,8 @@ footer img{
     background-image: url(../img/snowman.svg);
     bottom: 0;
     right: 0;
-    animation: snowman 60s infinite;
+    z-index: 0;
+    /* animation: snowman 60s infinite; */
 }
 @keyframes snowman{
     0%,100%{
