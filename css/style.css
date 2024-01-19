@@ -70,7 +70,15 @@ h1 img{
     left: 0;
     z-index: -1;
     transition: all 1s;
+    width: 230px;
+    height: 500px;
 }
+.smartphone1 img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
 /* スマホの真ん中部分 */
 .smartphone2{
     position: absolute;
@@ -78,13 +86,28 @@ h1 img{
     left: 35%;
     z-index: 0;
     transition: all 1s;
+    width: 230px;
+    height: 500px;
 }
+.smartphone2 img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
 .smartphone3{
     position: absolute;
     top: 15%;
     left: 70%;
     z-index: -1;
     transition: all 1s;
+    width: 230px;
+    height: 500px;
+}
+.smartphone3 img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -93,8 +116,9 @@ h1 img{
     position: absolute;
     width: 69px;
     height: 120px;
-    top: -120px;
+    top: -100px;
     left: 80px;
+    z-index: -100;
     background-image: url(../img/camera.svg);
 }
 
@@ -436,7 +460,7 @@ h2 span{
     height: 557px;
     top: -85px;
     left: 140px;
-    background-image: url(../img/search.svg);
+    background: url(../img/search.svg) center/contain no-repeat;
     animation: circle5 6s infinite;
     z-index: 100;
 }
@@ -508,7 +532,7 @@ h2 span{
     position: absolute;
     width: 264px;
     height: 557px;
-    background-image: url(../img/FEATURESshare.svg);
+    background: url(../img/FEATURESshare.svg) center / contain no-repeat;
     animation: circle5 6s infinite;
     top: -20%;
     left: 25%;
@@ -579,7 +603,7 @@ h2 span{
     height: 557px;
     top: -85px;
     left: 140px;
-    background-image: url(../img/album.svg);
+    background: url(../img/album.svg) center / contain no-repeat;
     animation: circle5 6s infinite;
 }
 
